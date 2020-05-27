@@ -1,34 +1,277 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <title></title>
+        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
         <style>
+            /*초기화*/
             *{
                 margin: 0px;
                 padding: 0px;
             }
-            #wrapper {
+            li {
+                list-style-type: none;
+            }
+            .clear{
+                clear: both;
+            }
+        </style>
+
+        <style>
+            #wrapper{
+                font-family: 'Nanum Gothic', sans-serif, '굴림';
+            }
+            header {
+                background-color: #e1ffff;
                 width: 70%;
                 margin: 0 auto;
+                color: mediumblue;
+                padding: 30px;
             }
+            section {
+                width: 70%;
+                margin: 0 auto;
+                padding: 30px;
+            }
+            h3 {
+                margin-left: 30px;
+            }
+            footer {
+                background-color: aliceblue;
+                width: 70%;
+                margin: 0 auto;
+                padding: 30px;
+            }
+            header>nav>ul>li{
+                display: inline-block;
+                list-style-type: none;
+                border: 0.5px solid steelblue;
+                border-right: none;
+                padding: 3px 8px;
+            }
+            header>nav>ul>li:last-child {
+                border-right: 0.5px solid steelblue;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+            header>nav>ul>li:first-child {
+                border-radius: 15px 0 0 15px;
+            }
+            header>nav>ul>li:hover {
+                background-color: #474a57;
+                color: #ffffff;
+                cursor: pointer;
+            }
+            header {
+                position: relative;
+                height: 150px;
+            }
+            header .title{
+                position: absolute;
+                top: 60px;
+            }
+            header .menu_up{
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            header .menu_up>ul>li{
+                font-size: 11px;
+            }
+            header .menu_down{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+            /*--------헤더 스타일 끝---------*/
+           
+            /*---------섹션 스타일---------*/
+           section>article {
+               border: 1px solid #474a57;
+               padding: 20px;
+               margin-top: 30px;
+           }
+           section {
+                width: 60%;
+                float: left;
+                margin-left: 100px;
+           }
+            /*--------섹션 스타일 끝---------*/
+
+            /*--------사이드 스타일---------*/
+           aside {
+               /* border: 0.5px solid steelblue; */
+                background-color:azure;
+                margin: 0 auto;
+                padding: 20px;
+                margin-top: 30px;
+                margin-left: 700px;
+                padding: 10px;
+           }
+           aside {
+                width: 24%;
+                float: right;
+           }
+           aside>ul>li:first-child {
+               border: 1px solid  #474a57;
+               padding: 10px;
+           }
+           aside .ul2 {
+               overflow : hidden;
+           }
+           aside>ul>li:hover {
+                background-color: #474a57;
+                color: #ffffff;
+                cursor: pointer;
+            }
+            aside>ul.side_menu{
+                width: 100%
+            }
+            aside>ul.side_menu>li {
+                width: 48%;
+                display: inline-block;
+                border: 1px solid #474a57;
+                text-align: center;
+                padding: 5px 0;
+            }
+
+            aside ul.side_content>li {
+                width: 100%
+            }
+
+            aside ul.side_content>li {
+                width: 98%;
+                border: 1px solid #474a57;
+                padding: 5px;
+                box-sizing: border-box;
+            }
+
+            aside>ul.side_content>li>img{
+                float: left;
+                padding-right: 10px;
+                /* 이미지만 움직이면 다른것도 움직여서 이미지만 조정ok */
+            }
+
+            aside ul.side_css>li {
+                width: 100%
+            }
+
+            aside ul.side_css>li {
+                width: 98%;
+                border: 1px solid #474a57;
+                padding: 5px;
+                box-sizing: border-box;
+            }
+
+            aside>ul.side_css>li>img{
+                float: left;
+                padding-right: 10px;
+            }
+
+            aside>ul{
+                margin-bottom: 10px;
+            }
+            /*--------사이드 스타일 끝---------*/
+
+            /*--------푸터 스타일---------*/
+            footer {
+                border: 1px solid #474a57;
+                padding: 20px;
+                margin-top: 30px;
+                text-align: center;
+            }
+            /*--------푸터 스타일 끝---------*/
+
         </style>
     </head>
     <body>
     <div id="wrapper">
         <header>
-            <h1> Rint Development </h1>
-            <h2> HTML 5 + CSS3 Basic </h2>
-        </header>
-        <aside>
-            <ul>
-                <li>First</li>
-                <li>Second</li>
-                <li>Third</li>
-                <li>Fourth</li>
+            <nav class="menu_up">
+                <ul>
+                    <li>Web</li><li>Mobile</li><li>Game</li><li>Simulation</li><li>Data</li>
+                </ul>
+            </nav>
+            <div class="title">
+                <h1> Rint Development </h1>
+                <h2> HTML 5 + CSS3 Basic </h2>
+            </div>
+            <nav class="menu_down">
+                <ul>
+                    <li>HTML</li><li>CSS</li><li>JavaScript</li><li>JQuery</li><li>node.js</li>
+                </ul>
+            </nav>
+
+        <aside> 
+            <ul class="side_menu">
+                <li>HTML</li><li>CSS</li>
             </ul>
+            
+            <ul class="side_content">
+                <li>
+                    <img src="http://placeimg.com/30/30/tech">
+                    <div>
+                        <p>HTML</p>
+                        <p>0000-00-00</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="http://placeimg.com/30/30/people">
+                    <div>
+                        <p>HTML</p>
+                        <p>0000-00-00</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="http://placeimg.com/30/30/acrchitecture">
+                    <div>
+                        <p>HTML</p>
+                        <p>0000-00-00</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="http://placeimg.com/30/30/animals">
+                    <div>
+                        <p>HTML</p>
+                        <p>0000-00-00</p>
+                    </div>
+                </li>
+            </ul>
+            
+            <ul class="side_css">
+                <li>
+                    <img src="http://placeimg.com/30/30/tech">
+                    <div>
+                        <p>CSS</p>
+                        <p>0000-00-00</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="http://placeimg.com/30/30/people">
+                    <div>
+                        <p>CSS</p>
+                        <p>0000-00-00</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="http://placeimg.com/30/30/acrchitecture">
+                    <div>
+                        <p>CSS</p>
+                        <p>0000-00-00</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="http://placeimg.com/30/30/animals">
+                    <div>
+                        <p>CSS</p>
+                        <p>0000-00-00</p>
+                    </div>
+                </li>
+            </ul>
+            
         </aside>
+        
         <section>
             <article>
                 <h3>main articel1</h3>
@@ -49,10 +292,11 @@
                 </p>
             </article>
         </section>
+        <div class="clear"></div>
         <footer>
             <h2>HTML5 + CSS Basic</h2>
             <h3>Website layout basic</h3>
-        </footer>>
+        </footer>
     </div>
     </body>
 </html>
