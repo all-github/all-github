@@ -2,301 +2,343 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
-        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-        <style>
-            /*초기화*/
-            *{
-                margin: 0px;
-                padding: 0px;
-            }
-            li {
-                list-style-type: none;
-            }
-            .clear{
-                clear: both;
-            }
-        </style>
+        <title>Chapter-5</title>
+    <!-- 본문에서 다루지 않은 코드입니다. 부록A에서 살펴보는 플러그인입니다
+    구 버전의 인터넷 익스플로러에서 HTML5 태그를 인식하게 합니다 -->
+    <!--[if it is IE 9]>
+    <!=-초기화-->
+    <link href=<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; }
+        body { font-family: sans-serif; }
+        li { list-style: none; }
+        a { text-decoration: none;}
+        img { border: 0; }
+    </style>
+    <!--헤더-->
+    <style>
+        #main_header {
+            /* 중앙 정렬 */
+            width: 960px; margin: 0 auto;
+            /* 절대 좌표 */
+            height: 160px;
+            position: relative;
+        }
+        #main_header>#title {
+            position: absolute;
+            left: 20px; top: 30px;
+        }
+        #main_header>#main_gnb {
+            position: absolute;
+            right: 0; top: 0px;
+        }
+        #main_header>#main_lnb {
+            position: absolute;
+            right: 0; bottom: 10px;
+        }
+    </style>
+    <!--타이틀-->
+    <style>
+        #title {
+            font-family: 'Nanum Gothic', sans-serif, '굴림';
+        }
+    </style>
+    <!--메뉴(1)-->
+    <style>
+        #main_gnb>ul { overflow: hidden; }
+        #main_gnb>ul>li { float: left; }
+        #main_gnb>ul>li>a {
+            display: block;
+            padding: 2px 10px;
+            border: 1px solid black;
+        }
+        #main_gnb ul>li>a:hover {
+            background: black;
+            color: white;
+        }
+        #main_gnb>ul>li:first-child>a { border-radius: 10px 0 0 10px; }
+        #main_gnb>ul>li:last-child>a { border-radius: 0 10px 10px 0; }
+    </style>
+    <!--메뉴(2)-->
+    <style>
+        #main_lnb>ul { overflow: hidden; }
+        #main_lnb>ul>li { float: left; }
+        #main_lnb>ul>li>a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid black;
+        }
+        #main_lnb>ul>li>a:hover {
+            background: black;
+            color: white;
+        }
+        #main_lnb>ul>li:first-child>a { border-radius: 10px 0 0 10px; }
+        #main_lnb>ul>li:last-child>a { border-radius: 0 10px 10px 0; }
 
-        <style>
-            #wrapper{
-                font-family: 'Nanum Gothic', sans-serif, '굴림';
-            }
-            header {
-                background-color: #e1ffff;
-                width: 70%;
-                margin: 0 auto;
-                color: mediumblue;
-                padding: 30px;
-            }
-            section {
-                width: 70%;
-                margin: 0 auto;
-                padding: 30px;
-            }
-            h3 {
-                margin-left: 30px;
-            }
-            footer {
-                background-color: aliceblue;
-                width: 70%;
-                margin: 0 auto;
-                padding: 30px;
-            }
-            header>nav>ul>li{
-                display: inline-block;
-                list-style-type: none;
-                border: 0.5px solid steelblue;
-                border-right: none;
-                padding: 3px 8px;
-            }
-            header>nav>ul>li:last-child {
-                border-right: 0.5px solid steelblue;
-                border-top-right-radius: 15px;
-                border-bottom-right-radius: 15px;
-            }
-            header>nav>ul>li:first-child {
-                border-radius: 15px 0 0 15px;
-            }
-            header>nav>ul>li:hover {
-                background-color: #474a57;
-                color: #ffffff;
-                cursor: pointer;
-            }
-            header {
+    </style>
+    <!--콘텐츠-->
+    <style>
+        #content {
+            /* 중앙 정렬 */
+            width: 960px; margin: 0 auto;
+            /* 수평 레이아웃 구성 */
+            overflow: hidden;
+        }
+        #content>#main_section {
+            width: 750px;
+            float: left;
+        }
+        #content>#main_aside {
+            width: 200px;
+            float: right;
+        }
+    </style>
+    <!--본문-->
+    <style>
+        #main_section>article.main_article {
+            margin-bottom: 10px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+    </style>
+    <!--사이드-->
+    <style>
+        /* 첫번째 탭 */
+        aside #main_aside>ul:nth-of-type(1) { display: none; }
+        aside #main_aside>ul ~div:nth-of-type(1) { display: none; }
+        aside #main_aside>ul:checked ~div:nth-of-type(1) { display: block; }
+
+        /* 두번째 탭 */
+        input:nth-of-type(2) { display: none; }
+        input:nth-of-type(2) ~div:nth-of-type(2) { display: none; }
+        input:nth-of-type(2):checked ~div:nth-of-type(2) { display: block; }
+
+        /* 탭 모양 구성 */
+        section.buttons { overflow: hidden; }
+        section.buttons>label {
+            /* 수평 정렬 */
+            display: block; float: left;
+
+            /* 크기 및 글자 위치 지정 */
+            width: 100px; height: 30px;
+            line-height: 30px;
+            text-align: center;
+
+            /* 테두리 지정 */
+            box-sizing: border-box;
+            border: 1px solid black;
+
+            /* 색상 지정 */
+            background: black;
+            color: white;
+        }
+
+        /* 위치 지정 */
+            /* #main_header {
                 position: relative;
-                height: 150px;
             }
-            header .title{
+            #main_gnb {
                 position: absolute;
-                top: 60px;
             }
-            header .menu_up{
+            #main_lnb {
                 position: absolute;
-                top: 0;
-                right: 0;
-            }
-            header .menu_up>ul>li{
-                font-size: 11px;
-            }
-            header .menu_down{
-                position: absolute;
-                bottom: 0;
-                right: 0;
-            }
-            /*--------헤더 스타일 끝---------*/
-           
-            /*---------섹션 스타일---------*/
-           section>article {
-               border: 1px solid #474a57;
-               padding: 20px;
-               margin-top: 30px;
-           }
-           section {
-                width: 60%;
-                float: left;
-                margin-left: 100px;
-           }
-            /*--------섹션 스타일 끝---------*/
+                top: 300px;
+            } */
+    </style>
+    <!-- 목록 -->
+    <style>
+        .item {
+            overflow: hidden;
+            padding: 10px;
+            border: 1px solid black;
+            border-top: none;
+        }
+        .thumbnail {
+            float: left;
+        }
+        .description {
+            float: left;
+            margin-left: 10px;
+        }
+        .description>strong {
+            display: block;
+            width: 120px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+    <!--푸터-->
+    <style>
+        #main_footer {
+            /* 중앙 정렬 */
+            width: 960px; margin: 0 auto;
+            margin-bottom: 10px;
 
-            /*--------사이드 스타일---------*/
-           aside {
-               /* border: 0.5px solid steelblue; */
-                background-color:azure;
-                margin: 0 auto;
-                padding: 20px;
-                margin-top: 30px;
-                margin-left: 700px;
-                padding: 10px;
-           }
-           aside {
-                width: 24%;
-                float: right;
-           }
-           aside>ul>li:first-child {
-               border: 1px solid  #474a57;
-               padding: 10px;
-           }
-           aside .ul2 {
-               overflow : hidden;
-           }
-           aside>ul>li:hover {
-                background-color: #474a57;
-                color: #ffffff;
-                cursor: pointer;
-            }
-            aside>ul.side_menu{
-                width: 100%
-            }
-            aside>ul.side_menu>li {
-                width: 48%;
-                display: inline-block;
-                border: 1px solid #474a57;
-                text-align: center;
-                padding: 5px 0;
-            }
+            /* 테두리 */
+            position: absolute;
+            bottom: 20px;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid black;
 
-            aside ul.side_content>li {
-                width: 100%
-            }
+            /* 글자 정렬 */
+            text-align: center;
+        }
 
-            aside ul.side_content>li {
-                width: 98%;
-                border: 1px solid #474a57;
-                padding: 5px;
-                box-sizing: border-box;
-            }
-
-            aside>ul.side_content>li>img{
-                float: left;
-                padding-right: 10px;
-                /* 이미지만 움직이면 다른것도 움직여서 이미지만 조정ok */
-            }
-
-            aside ul.side_css>li {
-                width: 100%
-            }
-
-            aside ul.side_css>li {
-                width: 98%;
-                border: 1px solid #474a57;
-                padding: 5px;
-                box-sizing: border-box;
-            }
-
-            aside>ul.side_css>li>img{
-                float: left;
-                padding-right: 10px;
-            }
-
-            aside>ul{
-                margin-bottom: 10px;
-            }
-            /*--------사이드 스타일 끝---------*/
-
-            /*--------푸터 스타일---------*/
-            footer {
-                border: 1px solid #474a57;
-                padding: 20px;
-                margin-top: 30px;
-                text-align: center;
-            }
-            /*--------푸터 스타일 끝---------*/
-
-        </style>
+        /* #main_header {
+            position: relative;
+        }
+        #main_gnb {
+            position: absolute;
+        }
+        #main_lnb  {
+            position: absolute;
+            top:300px;
+            
+        } */
+    </style>
     </head>
     <body>
-    <div id="wrapper">
-        <header>
-            <nav class="menu_up">
-                <ul>
-                    <li>Web</li><li>Mobile</li><li>Game</li><li>Simulation</li><li>Data</li>
-                </ul>
-            </nav>
-            <div class="title">
-                <h1> Rint Development </h1>
-                <h2> HTML 5 + CSS3 Basic </h2>
+            <header id="main_header">
+                <div id="title">
+                    <h1>Rint Development</h1>
+                    <h2>HTML5 + CSS5 Basic</h2>
+                </div>
+                <nav id="main_gnb">
+                    <ul>
+                        <li><a href="#">Web</a></li>
+                        <li><a href="#">Mobile</a></li>
+                        <li><a href="#">Game</a></li>
+                        <li><a href="#">Simulation</a></li>
+                        <li><a href="#">Data</a></li>
+                    </ul>                
+                </nav>
+                <nav id="main_lnb">
+                    <ul>
+                        <li><a href="#">HTML5</a></li>
+                        <li><a href="#">CSS3</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">jQuery</a></li>
+                        <li><a href="#">Node.js</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="content">
+                <section id="main_section">
+                    <article class="main_article">
+                        <h1>Main_article</h1>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+                    </article>
+                    <article class="main_article">
+                        <h1>Main_article</h1>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+                    </article>
+                    <article class="main_article">
+                        <h1>Main_article</h1>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+                    </article>
+                </section>
+                <aside id="main_aside">
+                    <input id="first" type="radio" name="tab" checked="checked" />
+                    <input id="second" type="radio" name="tab" />
+                    <section class="buttons">
+                        <label for="first">First</label>
+                        <label for="second">Second</label>
+                    </section>
+                    <div class="tab_item">
+                        <ul>
+                            <li class="item"><a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x45" />
+                                </div>
+                                <div class="description">
+                                    <strong>HTML5 Canvas</strong><p>2019-03-15</p>
+                                </div>
+                            </a></li>
+                            <li class="item"><a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x45" />
+                                </div>
+                                <div class="description">
+                                    <strong>HTML5 Canvas</strong><p>2019-03-15</p>
+                                </div>
+                            </a></li>
+                            <li class="item"><a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x45" />
+                                </div>
+                                <div class="description">
+                                    <strong>HTML5 Canvas</strong><p>2019-03-15</p>
+                                </div>
+                            </a></li>
+                            <li class="item"><a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x45" />
+                                </div>
+                                <div class="description">
+                                    <strong>HTML5 Canvas</strong><p>2019-03-15</p>
+                                </div>
+                            </a></li>
+                            <li class="item"><a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x45" />
+                                </div>
+                                <div class="description">
+                                    <strong>HTML5 Canvas</strong><p>2019-03-15</p>
+                                </div>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="tab_item">
+                        <ul>
+                            <li class="item"><a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x45" />
+                                </div>
+                                <div class="description">
+                                    <strong>HTML5 Canvas</strong><p>2019-03-15</p>
+                                </div>
+                            </a></li>
+                            <li class="item"><a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x45" />
+                                </div>
+                                <div class="description">
+                                    <strong>HTML5 Canvas</strong><p>2019-03-15</p>
+                                </div>
+                            </a></li>
+                            <li class="item"><a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x45" />
+                                </div>
+                                <div class="description">
+                                    <strong>HTML5 Canvas</strong><p>2019-03-15</p>
+                                </div>
+                            </a></li>
+                            <li class="item"><a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x45" />
+                                </div>
+                                <div class="description">
+                                    <strong>HTML5 Canvas</strong><p>2019-03-15</p>
+                                </div>
+                            </a></li>
+                            <li class="item"><a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x45" />
+                                </div>
+                                <div class="description">
+                                    <strong>HTML5 Canvas</strong><p>2019-03-15</p>
+                                </div>
+                            </a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <footer id="main_footer">
+                    <h3>HTML5 + CSS Basic</h3>
+                    <address>Website Layout Basic</address>
+                </footer>
             </div>
-            <nav class="menu_down">
-                <ul>
-                    <li>HTML</li><li>CSS</li><li>JavaScript</li><li>JQuery</li><li>node.js</li>
-                </ul>
-            </nav>
-
-        <aside> 
-            <ul class="side_menu">
-                <li>HTML</li><li>CSS</li>
-            </ul>
-            
-            <ul class="side_content">
-                <li>
-                    <img src="http://placeimg.com/30/30/tech">
-                    <div>
-                        <p>HTML</p>
-                        <p>0000-00-00</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="http://placeimg.com/30/30/people">
-                    <div>
-                        <p>HTML</p>
-                        <p>0000-00-00</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="http://placeimg.com/30/30/acrchitecture">
-                    <div>
-                        <p>HTML</p>
-                        <p>0000-00-00</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="http://placeimg.com/30/30/animals">
-                    <div>
-                        <p>HTML</p>
-                        <p>0000-00-00</p>
-                    </div>
-                </li>
-            </ul>
-            
-            <ul class="side_css">
-                <li>
-                    <img src="http://placeimg.com/30/30/tech">
-                    <div>
-                        <p>CSS</p>
-                        <p>0000-00-00</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="http://placeimg.com/30/30/people">
-                    <div>
-                        <p>CSS</p>
-                        <p>0000-00-00</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="http://placeimg.com/30/30/acrchitecture">
-                    <div>
-                        <p>CSS</p>
-                        <p>0000-00-00</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="http://placeimg.com/30/30/animals">
-                    <div>
-                        <p>CSS</p>
-                        <p>0000-00-00</p>
-                    </div>
-                </li>
-            </ul>
-            
-        </aside>
-        
-        <section>
-            <article>
-                <h3>main articel1</h3>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu
-                </p>
-            </article>
-            <article>
-                <h3>main articel2</h3>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu
-                </p>
-            </article>
-            <article>
-                <h3>main articel3</h3>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu
-                </p>
-            </article>
-        </section>
-        <div class="clear"></div>
-        <footer>
-            <h2>HTML5 + CSS Basic</h2>
-            <h3>Website layout basic</h3>
-        </footer>
-    </div>
     </body>
 </html>
