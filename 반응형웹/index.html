@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <mata name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/reset.css" type="text/css" rel="stylesheet">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/644db68492.js" crossorigin="anonymous"></script>
+        <script src="JS/JQuery.js"></script>
+        <title>Portfolio</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <a href="index.html">KIM <span>E</span>UN YOUNG</a>
+                <button type="button">
+                    <span class="fas fa-bars"></span>
+                </button>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="banner">
+            <h1>PORTFOLIO</h1>
+            <P>I'M A FRONTEND DVELOPER</P>
+        </section>
+        <section class="work"></section>
+        <section class="portfolio">
+            <h2 class="subtitle">Portfolio</h2>
+        </section>
+        <section class="contact">
+            <h2 class="subtitle">Contact</h2>
+            <div class="text">
+                <p>안녕하세요. 김은영입니다.</p>
+                <p>궁금한 사항을 메일로 문의해 주시면 빠른 시일내에 답변드리도록 하겠습니다.</p>
+                <p>감사합니다.</p>
+            </div>
+            <ul>
+                <li><a href="#"><i class="fab fa-twitter icon"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram icon"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook-f icon"></i></a></li>
+                <li><a href="#"><i class="far fa-envelope icon"></i></a></li>
+            </ul>
+        </section>
+        <footer class="footer">
+            <p>
+                E-mail. user1@gmail.com
+            </p>
+            <p>
+                Copyright ⓒ 2020 by KIM EUN YOUNG. All Rights Reserved
+            </p>
+        </footer>
+        <script>
+            $(function(){
+                /* JQuery 소스 */
+                $(".logo>button").click(function()){
+                    $(".menu").slideToggle();
+                });
+            });
+        </script>
+    </body>
+</html>

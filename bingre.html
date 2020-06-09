@@ -4,35 +4,60 @@
         <meta charset="utf-8">
         <title>빙그레 모바일 사이트</title>
         <style>
+            /* reset */
             * {
               padding: 0;
               margin: 0;  
             }
-            .ana {
-                position: relative;
-                width: 600px;
-                margin: 0 auto;
+            .clear {
+                clear: both;
             }
             li {
                 list-style-type: none;
 
+            }
+
+            .wrap {
+                position: relative;
+                width: 600px;
+                margin: 0 auto;
             }
             header{
                 background-color:#ffffff;
                 height: 50px;
                 width: 450px;
             }
-            .menu>div{
-                    width: 30px;
-                    height: 5px;
-                    border-bottom: 2px solid black;
-                    margin-right: -50px;
+            header > .wrap{
+                position: absolute;
+                float: right;
+                left: 445px;
+                top: 17px;
+                /* padding: -5px 20px; */
+            }
+            header>nav{
+                position: absolute;
+                left: 450px;
+                top: 28px;
+            }
+            header>nav>div {
+                    width: 24px;
+                    height: 2px;
+                    background-color: black;
+                    margin-bottom: 6px;
                 }
+            header .logo {
+                font-weight: bold;
+                font-size: 1.5em;
+                float: left;
+                padding: 20px 30px;
+            }
             header .menu {
                 float: right;
             }
             section{
                 background-image: url(../images/back.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
                 height: 847px;
                 width: 450px;
                 padding: 20px;
@@ -40,6 +65,9 @@
             p {
                 font-size: 1rem;
                 padding: 15px;
+                font-weight: bold;
+                color: #414040;
+                letter-spacing: -2px;
             }
             h1 {
                font-size: 2em;
@@ -53,11 +81,11 @@
             }
             button{
                 background-color:#ffffff;
-                color: #be3333;
+                color: #ef3f53;
                 font-size: 1.3rem;
-                padding: 10px 30px;
-                border-radius: 25px;
-                border: 0px;
+                padding: 17px 31px;
+                border-radius: 50px;
+                border: none;
             }
             img:first-of-type {
                 position: absolute;
@@ -72,17 +100,16 @@
         </style>
     </head>
     <body>
-        <div class="ana">
+        <div class="wrap">
             <header>
-                <div> 빙그레 </div>
-                <nav class="nv">
-                 <ul class="menu">
+                <div class="logo"> 빙그레 </div>
+                <nav class="menu">
                        <div></div>
                        <div></div>
                        <div></div>
-                  </ul>
                 </nav>
             </header>
+            <div class="clear"></div>
             <section>
                 <h1>다양한 맛과 행복으로<br>
                     모두 하나되는 세상</h1>
@@ -96,8 +123,4 @@
             <footer>copyright @빙그레</footer>
         </div>            
         </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 0cbc18c11138927df236fd3992e48c7abb74cca7
