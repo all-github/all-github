@@ -1,0 +1,361 @@
+@charset "utf-8";
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo>a{
+    font-size: 30px;
+    color: #ffffff;
+    background-color: #fdcf48;
+    font-weight: bolder;
+}
+.logo>a>span{
+    color: #7edaf3;
+}
+
+.logo>button{
+    opacity: 0.5;
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 7px;
+}
+
+.menu a{
+    display: block;
+    color: #888888;
+    padding: 20px;
+    font-weight: bolder;
+}
+
+.menu {
+	display: block !important;
+}
+
+
+/* --------------------------- */
+
+/* banner */
+.banner {
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url('../img/milkyway.png');
+    background-position: center;
+    background-size: cover;
+
+    width: 100%;
+    height: 80vh;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.banner h1{
+    color: #fece46;
+    font-size: 4em;
+    letter-spacing: 0.2em;
+    margin-bottom: 10px;
+}
+.banner p{
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* 섭타이틀 */
+.subtitle{
+    color: #85daef;
+    font-size: 3.7em;
+    letter-spacing: -0.04em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    margin: 7px;
+    padding-top: 70px;
+}
+
+.susubtitle{
+    color: #a7aeb6;
+    font-size: 0.7em;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+/* 워크 */
+.work {
+    width: 70%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+.work .blogo{
+    background-color: #fece46;
+    border-radius: 50%;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+
+    text-align: center;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+
+    margin: 20px auto;
+    margin-top: 60px;
+}
+.work .bold{
+    color: #9ea3a7;
+    font-weight: bolder;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+.work .introduce{
+    color: #9ea3a7;
+    width: 80%;
+    margin: 20px auto;
+    line-height: 20px;
+    /* padding-bottom: 50px; */
+}
+
+/* Portfolio */
+.portfolio {
+    background-color: #f0f0f0;
+    padding: 1%;
+    padding-bottom: 30px;
+}
+.portfolio .container{
+    /* height: 1500px; */
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.portfolio .container>img {
+    width: 80%;
+    max-width: 900px;
+   
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+
+/* 콘택트 */
+.contact>.text>p{
+    font-size: 0.9em;
+    color: #9ea3a7;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.contact>ul{
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.contact .icon{
+    background-color: #fece46;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 9px;
+    margin: 4px;
+
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 푸터 */
+.footer {
+    background-color: #535353;
+    color: #9ea3a7;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 20px;
+    line-height: 20px;
+    padding-bottom: 40px;
+}
+
+
+/* 태블릿 사이즈 */
+@media all and (min-width:768px)
+{
+    .header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo>button{
+        display: none;
+    }
+    .menu ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .menu {
+        display: block;
+    }
+    .banner h1{
+        font-size: 100px;;
+    }    
+    .work {    
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 50px;
+    }
+    .portfolio .container{
+    height: 1500px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.portfolio .container>img {
+    width: 46%;
+    max-width: 500px;
+   
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.contact>.text>p{
+    font-size: 0.8em;
+    color: #9ea3a7;
+    text-align: center;
+    margin-bottom: 8px;
+}
+}
+
+/* PC 사이즈 */
+@media all and (min-width:1024px)
+{
+    .header{
+        width: 1024px;
+        margin: 0 auto;
+    }
+    .menu {
+        display: block;
+    }
+    .logo>a{
+        font-size: 30px;
+        color: #ffffff;
+        background-color: #fdcf48;
+        font-weight: bolder;
+    }
+    .logo>a>span{
+        color: #7edaf3;
+    }
+    .menu a{
+        display: block;
+        color: #888888;
+        
+        padding: 20px;
+        font-weight: bolder;
+    }
+    
+    /* --------------------------- */
+    
+    /* banner */
+    .banner {
+        background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url('../img/milkyway.png');
+        background-position: center;
+        background-size: cover;
+    
+        width: 100%;
+        height: 80vh;
+    }
+    
+    .banner {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner h1{
+        color: #fece46;
+        font-size: 4em;
+        letter-spacing: 0.2em;
+        margin-bottom: 10px;
+    }
+    .banner p{
+        color: #ffffff;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    
+    /* 섭타이틀 */
+    .subtitle{
+        color: #85daef;
+        font-size: 3.7em;
+        letter-spacing: -0.04em;
+        font-weight: bold;
+        text-align: center;
+        margin: 0 auto;
+        margin: 7px;
+        padding-top: 70px;
+    }
+    
+    .susubtitle{
+        color: #a7aeb6;
+        font-size: 0.7em;
+        letter-spacing: 0.05em;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
+    
+    .portfolio {
+        background-color: #f0f0f0;
+        padding: 1%;
+        padding-bottom: 30px;
+    }
+    .portfolio .container{
+        height: 1500px;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .portfolio .container>img {
+        width: 32%;
+        max-width: 900px;
+       
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .contact>ul{
+        display: flex;
+        margin-top: 40px;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .contact>.text>p{
+        font-size: 0.7em;
+        color: #9ea3a7;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+}

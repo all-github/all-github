@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <mata name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/reset.css" type="text/css" rel="stylesheet">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/644db68492.js" crossorigin="anonymous"></script>
+        <script src="JS/JQuery.js"></script>
+        <title>Portfolio</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <a href="index.html">KIM <span>E</span>UN YOUNG</a>
+                <button type="button">
+                    <span class="fas fa-bars"></span>
+                </button>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="banner">
+            <h1>PORTFOLIO</h1>
+            <P>I'M A FRONTEND DVELOPER</P>
+        </section>
+        <section class="work">
+            <ul class="workin">
+                <li class="blogo">H.</li>
+                <li class="bold">HOMEPAGE</li>
+                <li class="introduce">디자인 시안 작업을 포함하여 반응형웹, 모바일웹
+                    등의 플랫폼에 최적화된 홈페이지 디자인 작업 및 웹프로그램 
+                    개발까지 고객이 원하는 전략에 충실하게 수행하여 성공적인
+                    디자이너가 되도록 최선을 다하고 있습니다.</li>
+            </ul>
+            <ul class="workin">
+                <li class="blogo">P.</li>
+                <li class="bold">PUBLISHING</li>
+                <li class="introduce">Creative Design(Web/Mobile, UX/UI) 
+                        HTML5 / CSS3 웹표준, 모바일웹 퍼블리싱
+                        웹프로그램 개발, 웹프로모션 컨설팅 
+                        홈페이지 유지보수/관리</li>
+            </ul>
+            <ul class="workin">
+                <li class="blogo">B.</li>
+                <li class="bold">BRANDING</li>
+                <li class="introduce">풍부한 온라인 마케팅 경험과 역량을 바탕으로
+                통합 웹서비스를 제안드리며, 
+                창의적인 발상과 폭 넓은 네트워크를 기반하여 다양한
+                전문분야의 효과적인 Creative Design 방법론을 제안합니다.</li>
+            </ul>
+        </section>
+        <section class="portfolio">
+            <h2 class="subtitle">Portfolio</h2>
+            <h3 class="susubtitle">Designer Kim EunYoung</h3>
+            <div class="container">
+                <img src="IMG/src.jpg" class="item"/>
+                <img src="IMG/src1.png" class="item"/>
+                <img src="IMG/src2.jpg" class="item"/>
+                <img src="IMG/src3.jpg" class="item"/>
+                <img src="IMG/src4.jpg" class="item"/>
+                <img src="IMG/src5.jpg" class="item"/>
+                <img src="IMG/src6.jpg" class="item"/>
+                <img src="IMG/src7.jpg" class="item"/>
+                <img src="IMG/src8.jpg" class="item"/>
+            </div>
+        </section>
+        <section class="contact">
+            <h2 class="subtitle">Contact</h2>
+            <h3 class="susubtitle">Designer Kim EunYoung</h3>
+            <div class="text">
+                <p>안녕하세요. 김은영입니다.</p>
+                <p>궁금한 사항을 메일로 문의해 주시면 빠른 시일내에 답변드리도록 하겠습니다.</p>
+                <p>감사합니다.</p>
+            </div>
+            <ul>
+                <li><a href="#"><i class="fab fa-twitter icon"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram icon"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook-f icon"></i></a></li>
+                <li><a href="#"><i class="far fa-envelope icon"></i></a></li>
+            </ul>
+        </section>
+        <footer class="footer">
+            <p>
+                E-mail. user1@gmail.com
+            </p>
+            <p>
+                Copyright ⓒ 2020 by KIM EUN YOUNG. All Rights Reserved
+            </p>
+        </footer>
+        <script>
+            $(function(){
+                /* JQuery 소스 */
+                $(".logo>button").click(function(){
+                    $(".menu").slideToggle();
+                });
+            });
+        </script>
+    </body>
+</html>
