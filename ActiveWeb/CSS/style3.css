@@ -37,11 +37,37 @@
 }
 
 
+/* Portfolio */
+.portfolio {
+    background-color: #f0f0f0;
+    padding: 1%;
+    padding-bottom: 30px;
+}
+.portfolio .container{
+    /* height: 1500px; */
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.portfolio .container>img {
+    width: 80%;
+    max-width: 900px;
+   
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+
 /* --------------------------- */
 
 /* banner */
 .banner {
-    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url('../img/milkyway.png');
+    background-image: linear-gradient(rgba(249, 251, 107, 0.1),rgba(249, 251, 107, 0.4)), url('../img/milkyway.png');
     background-position: center;
     background-size: cover;
 
@@ -77,54 +103,6 @@
     padding-bottom: 60px;
 }
 
-.page{
-    color:#9ea3a7;
-    width: 50%;
-    font-size: 0.8em;
-    text-align: center;
-    margin: 0 auto;
-    line-height: 1.5em;
-}
-
-/* 워크 */
-.work {
-    width: 70%;
-    margin: 0 auto;
-
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 60px;
-}
-
-.work .blogo{
-    background-color: #fece46;
-    border-radius: 50%;
-    font-size: 32px;
-    font-weight: bold;
-    color: #ffffff;
-
-    text-align: center;
-    width: 2.5em;
-    height: 2.5em;
-    line-height: 2.5em;
-
-    margin: 20px auto;
-    margin-top: 60px;
-}
-.work .bold{
-    color: #9ea3a7;
-    font-weight: bolder;
-    letter-spacing: 0.2em;
-    text-align: center;
-}
-.work .introduce{
-    color: #9ea3a7;
-    width: 80%;
-    margin: 20px auto;
-    line-height: 20px;
-    padding-bottom: 50px;
-}
-
 /* 푸터 */
 .footer {
     background-color: #535353;
@@ -133,7 +111,7 @@
     font-size: 0.8em;
     padding: 20px;
     padding-bottom: 40px;
-    line-height: 20px;
+    line-height: 16px;
 }
 
 
@@ -155,10 +133,22 @@
     .menu {
         display: block;
     }
-    .work {    
+    .portfolio .container{
+        height: 1800px;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    
         display: flex;
-        flex-direction: row;
-        padding-bottom: 50px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .portfolio .container>img {
+        width: 45%;
+        max-width: 600px;
+       
+        margin: 10px auto;
     }
 }
 
@@ -193,7 +183,7 @@
     
     /* banner */
     .banner {
-        background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url('../img/milkyway.png');
+        background-image: linear-gradient(rgba(249, 251, 107, 0.1),rgba(249, 251, 107, 0.4)), url('../img/milkyway.png');
         background-position: center;
         background-size: cover;
     
@@ -218,12 +208,28 @@
         padding-top: 100px;
     }
     
-    .susubtitle{
-        color: #a7aeb6;
-        font-size: 0.7em;
-        letter-spacing: 0.05em;
-        text-align: center;
+    /* 포트폴리오 */
+    .portfolio {
+        background-color: #f0f0f0;
+        padding: 1%;
+        padding-bottom: 30px;
+    }
+    .portfolio .container{
+        height: 1300px;
+        width: 60%;
         margin: 0 auto;
-        padding-bottom: 60px;
+        text-align: center;
+    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .portfolio .container>img {
+        width: 32%;
+        max-width: 600px;
+       
+        margin: 0 auto;
+        margin-bottom: 30px;
     }
 }
