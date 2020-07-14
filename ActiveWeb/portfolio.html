@@ -8,6 +8,40 @@
         <script src="https://kit.fontawesome.com/644db68492.js" crossorigin="anonymous"></script>
         <script src="JS/JQuery.js"></script>
         <title>Portfolio</title>
+        <style>
+            .modal{
+                display: none;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0,0,0,0.7);
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+            .close{
+                color: #fff;
+                font-size: 4em;
+                position: absolute;
+                top: 20px;
+                right: 50px;
+                cursor: pointer;
+            }
+            .modal-content{
+                display: block;
+                width: 80%;
+                max-width: 500px;
+                margin: 100px auto;
+                animation: zoom 0.5s;
+            }
+            @keyframes zoom {
+                0%{
+                    transform: scale(0);
+                }
+                100%{
+                    transform: scale(1);
+                }
+            }
+        </style>
     </head>
     <body>
         <header class="header">
@@ -43,6 +77,11 @@
                 <img src="IMG/src8.jpg" class="item"/>
             </div>
         </section>
+        <!-- The Modal -->
+        <div class="modal">
+            <span class="close">&times;</span>            
+            <img class="modal-content" />
+        </div>
         <footer class="footer">
             <p>
                 E-mail. user1@gmail.com
@@ -57,6 +96,25 @@
                 $(".logo>button").click(function(){
                     $(".menu").slideToggle();
                 });
+            });
+        </script>
+        <script>
+            const imgItem = document.querySelector(".container");
+            const modalTag = document.querySelector(".modal");
+            imgItem.addEventListener("click",function(e){
+                //this, currentTarget, target
+                if( this == e.target ) return;
+                // modalTag위에 if( targetSrc == null ) return; 도 가능
+                let targetSrc = e.target.getAttribute("src");
+                console.log(targetSrc);
+                //모달의 display: block
+                modalTag.style.display = "block";
+                modalTag.children[1].src = targetSrc;
+            });
+            
+            const closeBtn = modalTag.children[0];
+            closeBtn.addEventListener("click",function(){
+                modalTag.style.display = "none";
             });
         </script>
     </body>

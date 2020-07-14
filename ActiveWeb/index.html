@@ -28,19 +28,21 @@
         </header>
         <section class="banner">
             <h1>
-                <p>P</p>
-                <p>O</p>
-                <p>R</p>
-                <p>T</p>
-                <p>F</p>
-                <p>O</p>
-                <p>L</p>
-                <p>I</p>
-                <p>O</p>
+                PORTFOLIO
             </h1>
             <span>I'M A FRONTEND DVELOPER</span>
         </section>
-        <section class="work">
+
+        <section id="about">
+            <input type="radio" name="tab" id="tab1" checked />
+            <input type="radio" name="tab" id="tab2" checked />
+            <input type="radio" name="tab" id="tab3" checked />
+        <div class="tab_btn">
+            <label for="tab1"></label>
+            <label for="tab2"></label>
+            <label for="tab3"></label>
+        </div>
+        <div class="work">
             <ul class="workin">
                 <li class="blogo">H.</li>
                 <li class="bold">HOMEPAGE</li>
@@ -65,7 +67,9 @@
                 창의적인 발상과 폭 넓은 네트워크를 기반하여 다양한
                 전문분야의 효과적인 Creative Design 방법론을 제안합니다.</li>
             </ul>
+        </div>
         </section>
+            
         <section class="portfolio">
             <h2 class="subtitle">Portfolio</h2>
             <h3 class="susubtitle">Designer Kim EunYoung</h3>
@@ -81,6 +85,11 @@
                 <img src="IMG/src8.jpg" class="item"/>
             </div>
         </section>
+         <!-- The Modal -->
+         <div class="modal">
+            <span class="close">&times;</span>            
+            <img class="modal-content" />
+        </div>
         <section class="contact">
             <h2 class="subtitle">Contact</h2>
             <h3 class="susubtitle">Designer Kim EunYoung</h3>
@@ -110,6 +119,25 @@
                 $(".logo>button").click(function(){
                     $(".menu").slideToggle();
                 });
+            });
+        </script>
+         <script>
+            const imgItem = document.querySelector(".container");
+            const modalTag = document.querySelector(".modal");
+            imgItem.addEventListener("click",function(e){
+                //this, currentTarget, target
+                if( this == e.target ) return;
+                // modalTag위에 if( targetSrc == null ) return; 도 가능
+                let targetSrc = e.target.getAttribute("src");
+                console.log(targetSrc);
+                //모달의 display: block
+                modalTag.style.display = "block";
+                modalTag.children[1].src = targetSrc;
+            });
+            
+            const closeBtn = modalTag.children[0];
+            closeBtn.addEventListener("click",function(){
+                modalTag.style.display = "none";
             });
         </script>
     </body>

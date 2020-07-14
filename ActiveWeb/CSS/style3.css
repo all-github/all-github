@@ -29,7 +29,25 @@
     display: block;
     color: #888888;
     padding: 20px;
+    position: relative;
     font-weight: bolder;
+}
+
+.menu a:before{
+    content: "";
+    display: inline-block;
+    background-color: #85daef;
+    width: 0;
+    height: 3px;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 12px;
+}
+.menu a:hover:before{
+   width: 100%;
+   transition: 0.4s;
 }
 
 .menu {
@@ -60,7 +78,14 @@
    
     margin: 0 auto;
     margin-bottom: 30px;
+    opacity: 0.8;
+    transition: 0.5s;
 }
+.portfolio .container>img:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
 
 
 /* --------------------------- */

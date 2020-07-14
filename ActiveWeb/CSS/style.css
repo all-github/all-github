@@ -9,10 +9,16 @@
 }
 
 .logo>a{
-    font-size: 30px;
-    color: #ffffff;
+    font-size: 25px;
+    color: #fff;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 10px;
     background-color: #fdcf48;
     font-weight: bolder;
+    letter-spacing: 0.2em;
+    z-index: 99;
 }
 .logo>a>span{
     color: #7edaf3;
@@ -32,22 +38,23 @@
     display: block;
     color: #888888;
     padding: 20px;
-    font-weight: bolder;
+    position: relative;
+    font-weight: bolder; 
 }
 
-/* .menu>li>a:before{
+/* .menu a:before{
     content: "";
     display: inline-block;
     background-color: #85daef;
-    width: 10px;
+    width: 0;
     height: 3px;
-}
+
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    bottom: -4px;
+    bottom: 12px;
 }
-.menu>li>a:before::before{
+.menu a:hover:before{
    width: 100%;
    transition: 0.4s;
 } */
@@ -80,16 +87,99 @@
     font-size: 4em;
     letter-spacing: 0.1rem;
     margin-bottom: 10px;
+    animation: banner_title 2.5s;
 }
-.banner p{
+.banner span{
     color: #ffffff;
     font-size: 1.2em;
     font-weight: bold;
+    animation: banner_title 2.5s;
 }
-.banner:hover span:nth-child(1){
+/* .banner:hover span:nth-child(1){
     color: #fff;
     transform: rotateY(360deg);
     transition: 1s;
+} */
+@keyframes banner_title {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* -----About Animation------ */
+#about{
+    width: 300px;
+    margin: 30px auto;
+}
+#about > .container{
+    width: 900px;
+    height: 300px;
+
+    position: relative;
+    left: 0;         
+}
+#about > input[id="tab2"]
+a
+#about > .container > .item{
+    text-align: center;
+    width: 300px;
+    float: left;
+}
+#about> .tab_btn > label{
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    background-color: #eee;
+}
+#about > input[id="tab1"]:checked ~ .workin{
+    left: 0px;
+}
+#about > input[id="tab2"]:checked ~ .workin{
+    left: -300px;
+}
+#about > input[id="tab3"]:checked ~ .workin{
+    left: -600px;
+}
+#about > .work > .item {
+    text-align: center;
+    width: 300px;
+    float: left;
+}
+#about > .work > .workin > li{
+    margin-top: 20px;
+}
+#about > .work > .workin > li:nth-child(1){
+    display: inline-block;
+    font-size: 50px;
+
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    
+    background-color: #fece46;
+    border-radius: 50%;
+}
+#about > .tab_btn{
+    text-align: center;
+}
+#about > .tab_btn > label{
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 3px;
+}
+#about > input[name="tab"]{
+    display: none;
+}
+#about > input[id="tab1"]:checked ~ .tab_btn label[for="tab1"],
+#about > input[id="tab2"]:checked ~ .tab_btn label[for="tab2"],
+#about > input[id="tab3"]:checked ~ .tab_btn label[for="tab3"]{
+    background-color: #7e5af3;
 }
 
 
@@ -114,8 +204,8 @@
     padding-bottom: 60px;
 }
 
-/* 워크 */
-.work {
+/* Container */
+.container {
     width: 70%;
     margin: 0 auto;
 
@@ -176,6 +266,12 @@
    
     margin: 0 auto;
     margin-bottom: 30px;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+.portfolio .container>img:hover{
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 
@@ -193,18 +289,57 @@
     justify-content: center;
     margin-bottom: 50px;
 }
-.contact .icon{
-    background-color: #fece46;
-    border-radius: 50%;
+.contact .icon{    
     font-size: 20px;
     color: #ffffff;
     padding: 9px;
-    margin: 4px;
-
-    width: 1em;
-    height: 1em;
+    margin: 4px;    
     text-align: center;
     margin-bottom: 40px;
+    z-index: 12;
+    /* overflow: hidden; */
+}
+
+.contact a{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    text-align:center;
+    background-color: #fece46;
+    overflow: hidden;
+}
+
+.contact a:before{
+    content: "";
+    background-color: #7e5af3;
+    color: white;
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    z-index: 10;
+}
+
+.contact a:hover:before{
+    width: 100%;
+}
+
+.contact a:hover .fab{
+    transform: rotateY(360deg);
+    transition: 1s;
+}
+.contact a:hover .far{
+    transform: rotateY(360deg);
+    transition: 1s;
+}
+.contact a .fab, .far{
+    position: relative;
 }
 
 /* 푸터 */
@@ -245,7 +380,7 @@
         position: relative;
     }
 
-    .work {    
+    .container {    
         display: flex;
         flex-direction: row;
         padding-bottom: 50px;
@@ -274,6 +409,39 @@
     text-align: center;
     margin-bottom: 8px;
 }
+
+/* ---------Modal----------- */
+.modal{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.close{
+    color: #fff;
+    font-size: 4em;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    cursor: pointer;
+}
+.modal-content{
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    margin: 100px auto;
+    animation: zoom 0.5s;
+}
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 /* PC 사이즈 */
@@ -303,23 +471,6 @@
         font-weight: bolder;
     }
 
-    .menu li>a:before{
-        content: "";
-        display: inline-block;
-        background-color: #85daef;
-        width: 10px;
-        height: 3px;
-       
-        position: absolute;
-        left: 30%;
-        transform: translate(-50%);
-        /* bottom: 2px; */
-    }
-
-    .menu li>:hover:before{
-       width: 60px;
-       transition: 0.4s;
-    }
     
     /* --------------------------- */
     
@@ -351,49 +502,6 @@
         font-size: 1.2em;
         font-weight: bold;
     }
-
-    .banner>h1 p{
-        animation-name: ani;
-    }
-    .banner>h1 p:nth-of-type(1){
-        transform: rotateY(360deg);
-        transition: 1s;
-    }
-    .banner>h1 p:nth-of-type(2){
-        transform: rotateY(360deg);
-        transition: 1s;
-    }
-    .banner>h1 p:nth-of-type(3){
-        animation-delay: 0.4s;
-    }
-    .banner>h1 p:nth-of-type(4){
-        animation-delay: 0.6s;
-    }
-    .banner>h1 p:nth-of-type(5){
-        animation-delay: 0.8s;
-    }
-    .banner>h1 p:nth-of-type(6){
-        animation-delay: 1s;
-    }
-    .banner>h1 p:nth-of-type(7){
-        animation-delay: 1.2s;
-    }
-    .banner>h1 p:nth-of-type(8){
-        animation-delay: 1.4s;
-    }
-    .banner>h1 p:nth-of-type(9){
-        animation-delay: 1.8s;
-    }
-/* 
-    @keyframes ani{
-        0%{
-            color: white;
-        }
-        50%{
-            transform: rotateY(360deg);
-            transition: 1s;
-        }
-    } */
 
     /* 섭타이틀 */
     .subtitle{
@@ -451,4 +559,4 @@
         text-align: center;
         margin-bottom: 8px;
     }
-}
+}}
