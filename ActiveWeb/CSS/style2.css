@@ -86,44 +86,35 @@
     margin: 30px auto;
     overflow: hidden;
 }
-#about > .container{
+#about > .work{
     width: 900px;
     height: 300px;
 
     position: relative;
-    left: 0;         
-    transition: 1s;
-}
-#about > input[id="tab1"]:checked ~ .container{
-    left: 0px;
-}
-#about > input[id="tab2"]:checked ~ .container{
-    left: -300px;
-}
-#about > input[id="tab3"]:checked ~ .container{
-    left: -600px;
+    left: 0;  
+    transition: 0.5s;       
 }
 #about > .work > .workin{
     text-align: center;
     width: 300px;
     float: left;
 }
-/* #about> .tab_btn > label{
+#about> .tab_btn > label{
     display: inline-block;
     width: 20px;
     height: 10px;
-    background-color:#dcdcdd;
-} */
-#about > input[id="tab1"]:checked ~ .workin{
+    background-color: #dcdcdd;
+}
+#about input[id="tab1"]:checked ~ .work{
     left: 0px;
 }
-#about > input[id="tab2"]:checked ~ .workin{
+#about input[id="tab2"]:checked ~ .work{
     left: -300px;
 }
-#about > input[id="tab3"]:checked ~ .workin{
+#about input[id="tab3"]:checked ~ .work{
     left: -600px;
 }
-#about > .work > .workin {
+#about > .work > .item {
     text-align: center;
     width: 300px;
     float: left;
