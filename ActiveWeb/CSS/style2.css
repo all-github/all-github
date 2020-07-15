@@ -271,6 +271,42 @@
 /* PC 사이즈 */
 @media all and (min-width:1024px)
 {
+    head{
+        width: 1024px;
+        margin: 0 auto;
+    }
+    #head>.gnb>label[for="menu_btn"]{
+        display: none;
+    }
+    #head>.gnb>.main_menu{
+        display: flex;
+        position: static;
+    }
+    #head>.gnb>.main_menu li{
+        text-align: center;
+    }
+
+    #about{
+        width: 90%;
+        margin: 30px auto;
+        overflow: auto;
+    }
+    #about>.container{
+        position: static;
+        margin: 0 auto;
+    }
+    #about>.tab_btn{
+        display: none;
+    }
+    #contact>.text{
+        display: block;
+        width: 350px;
+        margin: 20px auto;
+    }
+    #contact>.text>p{
+        margin-top: 5px;
+    }
+
     .header{
         width: 1024px;
         margin: 0 auto;

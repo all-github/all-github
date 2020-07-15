@@ -189,11 +189,6 @@ li{
     font-weight: bold;
     animation: banner_title 2.5s;
 }
-/* .banner:hover span:nth-child(1){
-    color: #fff;
-    transform: rotateY(360deg);
-    transition: 1s;
-} */
 @keyframes banner_title {
     0% {
         opacity: 0;
@@ -218,15 +213,7 @@ li{
     left: 0;  
     transition: 0.5s;       
 }
-<<<<<<< HEAD
 #about > input[id="tab2"]
-a
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of e489769... 2
-=======
->>>>>>> parent of 3b84912... 3
 #about > .work > .workin{
     text-align: center;
     width: 300px;
@@ -238,37 +225,14 @@ a
     height: 10px;
     background-color: #dcdcdd;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 3b84912... 3
-#about > input[id="tab1"]:checked ~ .work{
-=======
-#about input[id="tab1"]:checked ~ .work{
->>>>>>> parent of e489769... 2
+
+#about >input[id="tab1"]:checked ~ .work{
     left: 0px;
 }
 #about input[id="tab2"]:checked ~ .work{
     left: -300px;
 }
-<<<<<<< HEAD
 #about > input[id="tab3"]:checked ~ .work{
-<<<<<<< HEAD
-=======
-#about > input[id="tab1"]:checked ~ .workin{
-    left: 0px;
-}
-#about > input[id="tab2"]:checked ~ .workin{
-    left: -300px;
-}
-#about > input[id="tab3"]:checked ~ .workin{
->>>>>>> parent of e638a3c... ㅇ
-=======
-#about input[id="tab3"]:checked ~ .work{
->>>>>>> parent of e489769... 2
-=======
->>>>>>> parent of 3b84912... 3
     left: -600px;
 }
 #about > .work > .item {
@@ -735,4 +699,4 @@ a
         text-align: center;
         margin-bottom: 8px;
     }
-}}
+}
