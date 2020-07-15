@@ -13,8 +13,7 @@
     color: #fff;
     height: 100%;
     box-sizing: border-box;
-    padding: 5px;
-    margin: 10px;
+    margin: 2px;
     background-color: #fdcf48;
     font-weight: bolder;
     letter-spacing: 0.2em;
@@ -34,13 +33,108 @@
     padding: 7px;
 }
 
+/* navigation menu */
+#head>.gnb label[for="menu_btn"] {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 10px auto;
+    /* 기준 위치를 정한다 */
+    position: relative;
+  }
+  #head>.gnb label[for="menu_btn"] span {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 2px solid #000;
+  
+    /* 위치값 지정 */
+    position: absolute;
+    transition: 0.3s;
+  }
+  #head>.gnb label[for="menu_btn"] span:nth-child(1) {
+    top: 0;
+  }
+  #head>.gnb label[for="menu_btn"] span:nth-child(2) {
+    top: 50%;
+  }
+  #head>.gnb label[for="menu_btn"] span:nth-child(3) {  
+    top: 100%;
+  }
+  
+  /* X표시 만들기 */
+   /* top 으로 위치조정 */
+label[for="menu"]span:nth-child(1){
+    top: 0%;
+}
+label[for="menu"]span:nth-child(2){
+    top: 50%;
+}
+label[for="menu"]span:nth-child(3){
+    top: 100%;
+}
+
+/* 인접선택자로 움직이기 */
+/* input[id="menu_btn"]:checked + label[for="menu_btn"] span:nth-child(1){
+    transform: rotate(45deg);
+    top: 50%;
+}
+input[id="menu_btn"]:checked + label[for="menu_btn"] span:nth-child(2){
+    opacity: 0;
+}
+input[id="menu_btn"]:checked + label[for="menu_btn"] span:nth-child(3){
+    transform: rotate(-45deg);
+    top: 50%;
+}
+li{
+    background-color: #222;
+    width: 2px;
+    height: 10px;
+    margin: 20px;
+} */
+  #head
+    >.gnb
+    >input[id="menu_btn"]:checked
+    +label[for="menu_btn"]
+    span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  #head
+    >.gnb
+    >input[id="menu_btn"]:checked
+    +label[for="menu_btn"]
+    span:nth-child(2) {
+    opacity: 0;
+  }
+  #head
+    >.gnb
+    >input[id="menu_btn"]:checked
+    +label[for="menu_btn"]
+    span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  
+  /* 체크여부에 따라 메인 메뉴가 보여진다. */
+  #head>.gnb>input[id="menu_btn"] {
+    display: none;
+  }
+  #head>.gnb>.main_menu {
+    display: none;
+  }
+  
+  #head>.gnb>input[id="menu_btn"]:checked~.main_menu {
+    display: block !important;
+  }
+/* 
+구 내비
 .menu a{
     display: block;
     color: #888888;
     padding: 20px;
     position: relative;
     font-weight: bolder; 
-}
+} */
 
 /* .menu a:before{
     content: "";
@@ -59,9 +153,9 @@
    transition: 0.4s;
 } */
 
-.menu {
+/* .menu {
 	display: block !important;
-}
+} */
 
 
 /* --------------------------- */
@@ -133,7 +227,7 @@ a
     display: inline-block;
     width: 20px;
     height: 10px;
-    background-color: #eee;
+    background-color: #dcdcdd;
 }
 #about > input[id="tab1"]:checked ~ .workin{
     left: 0px;
@@ -170,7 +264,7 @@ a
     display: inline-block;
     width: 20px;
     height: 10px;
-    background-color: #eee;
+    background-color: #dcdcdd;
     border-radius: 3px;
 }
 #about > input[name="tab"]{
@@ -451,7 +545,7 @@ a
         width: 1024px;
         margin: 0 auto;
     }
-    .menu {
+    .nav {
         display: block;
     }
     .logo>a{
@@ -463,7 +557,7 @@ a
     .logo>a>span{
         color: #7edaf3;
     }
-    .menu a{
+    .nav a{
         display: block;
         color: #888888;
         

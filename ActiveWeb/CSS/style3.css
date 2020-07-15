@@ -6,10 +6,15 @@
 }
 
 .logo>a{
-    font-size: 30px;
-    color: #ffffff;
+    font-size: 25px;
+    color: #fff;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 2px;
     background-color: #fdcf48;
     font-weight: bolder;
+    letter-spacing: 0.2em;
+    z-index: 99;
 }
 .logo>a>span{
     color: #7edaf3;
@@ -25,33 +30,44 @@
     padding: 7px;
 }
 
-.menu a{
-    display: block;
-    color: #888888;
-    padding: 20px;
-    position: relative;
-    font-weight: bolder;
-}
-
-.menu a:before{
-    content: "";
+/* navigation menu */
+#head>.gnb label[for="menu_btn"] {
     display: inline-block;
-    background-color: #85daef;
-    width: 0;
-    height: 3px;
-
+    width: 30px;
+    height: 30px;
+    margin: 10px auto;
+    /* 기준 위치를 정한다 */
+    position: relative;
+  }
+  #head>.gnb label[for="menu_btn"] span {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 2px solid #000;
+  
+    /* 위치값 지정 */
     position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    bottom: 12px;
+    transition: 0.3s;
+  }
+  #head>.gnb label[for="menu_btn"] span:nth-child(1) {
+    top: 0;
+  }
+  #head>.gnb label[for="menu_btn"] span:nth-child(2) {
+    top: 50%;
+  }
+  #head>.gnb label[for="menu_btn"] span:nth-child(3) {  
+    top: 100%;
+  }
+  
+  /* X표시 만들기 */
+   /* top 으로 위치조정 */
+label[for="menu"]span:nth-child(1){
+    top: 0%;
 }
-.menu a:hover:before{
-   width: 100%;
-   transition: 0.4s;
+label[for="menu"]span:nth-child(2){
+    top: 50%;
 }
-
-.menu {
-	display: block !important;
+label[for="menu"]span:nth-child(3){
+    top: 100%;
 }
 
 

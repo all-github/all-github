@@ -4,12 +4,16 @@
     display: flex;
     justify-content: space-between;
 }
-
 .logo>a{
-    font-size: 30px;
-    color: #ffffff;
+    font-size: 25px;
+    color: #fff;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 2px;
     background-color: #fdcf48;
     font-weight: bolder;
+    letter-spacing: 0.2em;
+    z-index: 99;
 }
 .logo>a>span{
     color: #7edaf3;
