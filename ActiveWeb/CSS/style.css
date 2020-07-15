@@ -208,17 +208,22 @@ li{
 #about{
     width: 300px;
     margin: 30px auto;
+    overflow: hidden;
 }
 #about > .container{
     width: 900px;
     height: 300px;
 
     position: relative;
-    left: 0;         
+    left: 0;  
+    transition: 0.5s;       
 }
+<<<<<<< HEAD
 #about > input[id="tab2"]
 a
 <<<<<<< HEAD
+=======
+>>>>>>> parent of e489769... 2
 #about > .work > .workin{
 =======
 #about > .container > .item{
@@ -234,12 +239,17 @@ a
     background-color: #dcdcdd;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #about > input[id="tab1"]:checked ~ .work{
+=======
+#about input[id="tab1"]:checked ~ .work{
+>>>>>>> parent of e489769... 2
     left: 0px;
 }
-#about > input[id="tab2"]:checked ~ .work{
+#about input[id="tab2"]:checked ~ .work{
     left: -300px;
 }
+<<<<<<< HEAD
 #about > input[id="tab3"]:checked ~ .work{
 =======
 #about > input[id="tab1"]:checked ~ .workin{
@@ -250,6 +260,9 @@ a
 }
 #about > input[id="tab3"]:checked ~ .workin{
 >>>>>>> parent of e638a3c... ㅇ
+=======
+#about input[id="tab3"]:checked ~ .work{
+>>>>>>> parent of e489769... 2
     left: -600px;
 }
 #about > .work > .item {
@@ -582,6 +595,55 @@ a
     
     /* --------------------------- */
     
+/* -----About Animation------ */
+#about{
+    width: 1500px;
+    margin: 30px auto;
+    background-color: #fff;
+    overflow: hidden;
+}
+#about > .work{
+    width: 900px;
+    height: 300px;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    /* left: 0; */
+}
+#about > .work > .workin{
+    text-align: center;
+    width: 300px;
+    float: left;
+}
+/* #about> .tab_btn > label{
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    background-color: #dcdcdd;
+} */
+.tab_radio{
+    display: none;
+}
+.tab_btn{
+    display: none;
+}
+#about > .work > .workin > li{
+    margin-top: 20px;
+}
+#about > .work > .workin > li:nth-child(1){
+    display: inline-block;
+    font-size: 50px;
+
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    
+    background-color: #fece46;
+    border-radius: 50%;
+}
+}
+
+
     /* banner */
     .banner {
         background-image: linear-gradient(rgba(171, 138, 224, 0.1),rgba(171, 138, 224, 0.6)), url('../img/milkyway.png');
@@ -638,7 +700,7 @@ a
         padding-bottom: 30px;
     }
     .portfolio .container{
-        height: 1040px;
+        height: 1500px;
         width: 70%;
         margin: 0 auto;
         text-align: center;
