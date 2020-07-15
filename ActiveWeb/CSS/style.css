@@ -209,7 +209,7 @@ li{
     width: 300px;
     margin: 30px auto;
 }
-#about > .work{
+#about > .container{
     width: 900px;
     height: 300px;
 
@@ -218,7 +218,11 @@ li{
 }
 #about > input[id="tab2"]
 a
+<<<<<<< HEAD
 #about > .work > .workin{
+=======
+#about > .container > .item{
+>>>>>>> parent of e638a3c... ㅇ
     text-align: center;
     width: 300px;
     float: left;
@@ -229,6 +233,7 @@ a
     height: 10px;
     background-color: #dcdcdd;
 }
+<<<<<<< HEAD
 #about > input[id="tab1"]:checked ~ .work{
     left: 0px;
 }
@@ -236,6 +241,15 @@ a
     left: -300px;
 }
 #about > input[id="tab3"]:checked ~ .work{
+=======
+#about > input[id="tab1"]:checked ~ .workin{
+    left: 0px;
+}
+#about > input[id="tab2"]:checked ~ .workin{
+    left: -300px;
+}
+#about > input[id="tab3"]:checked ~ .workin{
+>>>>>>> parent of e638a3c... ㅇ
     left: -600px;
 }
 #about > .work > .item {
