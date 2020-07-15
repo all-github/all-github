@@ -210,7 +210,7 @@ li{
     margin: 30px auto;
     overflow: hidden;
 }
-#about > .container{
+#about > .work{
     width: 900px;
     height: 300px;
 
@@ -222,12 +222,12 @@ li{
 #about > input[id="tab2"]
 a
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of e489769... 2
-#about > .work > .workin{
 =======
-#about > .container > .item{
->>>>>>> parent of e638a3c... ㅇ
+>>>>>>> parent of 3b84912... 3
+#about > .work > .workin{
     text-align: center;
     width: 300px;
     float: left;
@@ -240,6 +240,9 @@ a
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 3b84912... 3
 #about > input[id="tab1"]:checked ~ .work{
 =======
 #about input[id="tab1"]:checked ~ .work{
@@ -251,6 +254,7 @@ a
 }
 <<<<<<< HEAD
 #about > input[id="tab3"]:checked ~ .work{
+<<<<<<< HEAD
 =======
 #about > input[id="tab1"]:checked ~ .workin{
     left: 0px;
@@ -263,6 +267,8 @@ a
 =======
 #about input[id="tab3"]:checked ~ .work{
 >>>>>>> parent of e489769... 2
+=======
+>>>>>>> parent of 3b84912... 3
     left: -600px;
 }
 #about > .work > .item {
