@@ -11,7 +11,7 @@
 .logo>a{
     font-size: 25px;
     color: #fff;
-    height: 100%;
+    height: 35px;
     box-sizing: border-box;
     margin: 2px;
     background-color: #fdcf48;
@@ -34,7 +34,7 @@
 }
 
 /* navigation menu */
-#head>.gnb label[for="menu_btn"] {
+.gnb label[for="menu_btn"] {
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -42,7 +42,7 @@
     /* 기준 위치를 정한다 */
     position: relative;
   }
-  #head>.gnb label[for="menu_btn"] span {
+.gnb label[for="menu_btn"] span {
     display: inline-block;
     width: 100%;
     border-bottom: 2px solid #000;
@@ -51,13 +51,13 @@
     position: absolute;
     transition: 0.3s;
   }
-  #head>.gnb label[for="menu_btn"] span:nth-child(1) {
+.gnb label[for="menu_btn"] span:nth-child(1) {
     top: 0;
   }
-  #head>.gnb label[for="menu_btn"] span:nth-child(2) {
+.gnb label[for="menu_btn"] span:nth-child(2) {
     top: 50%;
   }
-  #head>.gnb label[for="menu_btn"] span:nth-child(3) {  
+.gnb label[for="menu_btn"] span:nth-child(3) {  
     top: 100%;
   }
   
@@ -91,23 +91,20 @@ li{
     height: 10px;
     margin: 20px;
 } */
-  #head
-    >.gnb
+ .gnb
     >input[id="menu_btn"]:checked
     +label[for="menu_btn"]
     span:nth-child(1) {
     top: 50%;
     transform: rotate(45deg);
   }
-  #head
-    >.gnb
+ .gnb
     >input[id="menu_btn"]:checked
     +label[for="menu_btn"]
     span:nth-child(2) {
     opacity: 0;
   }
-  #head
-    >.gnb
+  .gnb
     >input[id="menu_btn"]:checked
     +label[for="menu_btn"]
     span:nth-child(3) {
@@ -116,14 +113,14 @@ li{
   }
   
   /* 체크여부에 따라 메인 메뉴가 보여진다. */
-  #head>.gnb>input[id="menu_btn"] {
+  .gnb>input[id="menu_btn"] {
     display: none;
   }
-  #head>.gnb>.main_menu {
+  .gnb>.main_menu {
     display: none;
   }
   
-  #head>.gnb>input[id="menu_btn"]:checked~.main_menu {
+ .gnb>input[id="menu_btn"]:checked~.main_menu {
     display: block !important;
   }
 /* 
@@ -448,7 +445,7 @@ li{
 /* 태블릿 사이즈 */
 @media all and (min-width:768px)
 {
-    .header{
+    .head{
         display: flex;
         justify-content: space-between;
     }
@@ -538,7 +535,7 @@ li{
 /* PC 사이즈 */
 @media all and (min-width:1024px)
 {
-    .header{
+    .head{
         width: 1024px;
         margin: 0 auto;
     }
@@ -562,17 +559,21 @@ li{
         font-weight: bolder;
     }
 
+    .gnb label[for="menu_btn"]{
+        display: none;
+    }
     
     /* --------------------------- */
     
 /* -----About Animation------ */
 #about{
+    
     width: 1500px;
     margin: 30px auto;
     background-color: #fff;
     overflow: hidden;
 }
-#about > .work{
+.work{
     width: 900px;
     height: 300px;
     justify-content: center;
@@ -580,7 +581,7 @@ li{
     position: relative;
     /* left: 0; */
 }
-#about > .work > .workin{
+.work > .workin{
     text-align: center;
     width: 300px;
     float: left;
@@ -597,10 +598,10 @@ li{
 .tab_btn{
     display: none;
 }
-#about > .work > .workin > li{
+.work > .workin > li{
     margin-top: 20px;
 }
-#about > .work > .workin > li:nth-child(1){
+.work > .workin > li:nth-child(1){
     display: inline-block;
     font-size: 50px;
 
