@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="reset.css" type="text/css" rel="stylesheet">
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/644db68492.js" crossorigin="anonymous"></script>
+        <title>Grid title</title>
+        <!-- <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .item{
+                border: 2px solid cadetblue;
+                background: aliceblue;
+            }
+            .item:nth-child(odd){
+                background: turquoise;
+            }
+            .wrapper{
+                width: 100vw;
+                height: 100vh;
+                background: #eee;
+                text-align: center;
+                position: relative;
+                font-size: 30px;
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-template-rows: repeat(3,1fr);
+                grid-auto-rows: minmax(200px, auto);
+            }
+            .menu-bar{
+                background: #eee;
+                width: 20vw;
+                height: 100vh;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(10, 1fr);
+                grid-auto-rows: minmax(200px, auto);
+                grid-template-areas: "main-menu . . . . . ."
+            }
+            .btnMenu:hover{
+                animation: menu_bar;
+            }
+            @keyframes menu_bar{
+                0%{
+                    scale: 1;
+                    opacity: 0.8;
+                }
+                100%{
+                    scale: 1.2;
+                    opacity: 1;
+                }
+            }
+        </style> -->
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- 햄버거 메뉴 -->
+            <div class="btnMenu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- 메인 메뉴 -->
+            <div class="main-menu">
+                <div class="logo">
+                    <img src="../images/logo4.png">
+                </div>
+                <nav class="gnb">
+                    <ul>
+                        <li>
+                            <a href="#" value="0">HOME</a>
+                            <a href="#" value="1">VALUE</a>
+                            <a href="#" value="2">SOCIAL</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- 컨텐츠가 보이는 화면 -->
+            <div class="container">
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
