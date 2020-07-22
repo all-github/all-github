@@ -18,7 +18,7 @@
     font-weight: bolder;
     letter-spacing: 0.2em;
     z-index: 99;
-}
+}ㅅ
 .logo>a>span{
     color: #7edaf3;
 }
@@ -91,7 +91,7 @@ li{
     height: 10px;
     margin: 20px;
 } */
- .gnb
+ /* .gnb
     >input[id="menu_btn"]:checked
     +label[for="menu_btn"]
     span:nth-child(1) {
@@ -110,8 +110,8 @@ li{
     span:nth-child(3) {
     top: 50%;
     transform: rotate(-45deg);
-  }
-  
+  } 이쪽 부분이 전혀 적용되지 않는것같다
+   */
   /* 체크여부에 따라 메인 메뉴가 보여진다. */
   .gnb>input[id="menu_btn"] {
     display: none;
@@ -123,17 +123,17 @@ li{
  .gnb>input[id="menu_btn"]:checked~.main_menu {
     display: block !important;
   }
-/* 
-구 내비
+
+/* 구 내비..인데 왠지 먹힌다잉 */
 .menu a{
     display: block;
     color: #888888;
     padding: 20px;
     position: relative;
     font-weight: bolder; 
-} */
+}
 
-/* .menu a:before{
+.menu a:before{
     content: "";
     display: inline-block;
     background-color: #85daef;
@@ -148,7 +148,7 @@ li{
 .menu a:hover:before{
    width: 100%;
    transition: 0.4s;
-} */
+}
 
 /* .menu {
 	display: block !important;
@@ -199,6 +199,7 @@ li{
 /* -----About Animation------ */
 #about{
     width: 300px;
+    height: 300px;
     margin: 30px auto;
     overflow: hidden;
 }
@@ -208,7 +209,7 @@ li{
 
     position: relative;
     left: 0;  
-    transition: 0.5s;       
+    transition: 0.5s;
 }
 #about > input[id="tab2"]
 #about > .work > .workin{
@@ -223,13 +224,13 @@ li{
     background-color: #dcdcdd;
 }
 
-#about >input[id="tab1"]:checked ~ .work{
+#about >input[id="tab1"]:checked~.work{
     left: 0px;
 }
-#about input[id="tab2"]:checked ~ .work{
+#about > input[id="tab2"]:checked~.work{
     left: -300px;
 }
-#about > input[id="tab3"]:checked ~ .work{
+#about > input[id="tab3"]:checked~.work{
     left: -600px;
 }
 #about > .work > .item {
@@ -251,7 +252,8 @@ li{
     background-color: #fece46;
     border-radius: 50%;
 }
-#about > .tab_btn{
+
+/* #about > .tab_btn{
     text-align: center;
 }
 #about > .tab_btn > label{
@@ -268,7 +270,7 @@ li{
 #about > input[id="tab2"]:checked ~ .tab_btn label[for="tab2"],
 #about > input[id="tab3"]:checked ~ .tab_btn label[for="tab3"]{
     background-color: #7e5af3;
-}
+} */
 
 
 /* 섭타이틀 */
@@ -498,7 +500,7 @@ li{
     margin-bottom: 8px;
 }
 
-/* ---------Modal----------- */
+/* ---------Modal---------- */
 .modal{
     display: none;
     width: 100%;
