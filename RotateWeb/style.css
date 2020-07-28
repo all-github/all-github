@@ -79,15 +79,269 @@
 .container{
     background: #222;
     /* 위치 지정 */
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 1; */
     /* 크기 지정 */
     width: 100%;
     height: 100%;
 
     /* 3D 회전 설정 */
     transform-origin: right center;
-    transform: rotateY(-10deg);
+    transition: 0.5s;
+    position: relative;
+}
+.container.show{
+    transform: rotateY(-10deg);    
+}
+.container>div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+    
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: minxmax(400px, auto);
+}
+.container>div.item{
+    opacity: 1;
+}
+.container>div.item p{
+    transform: rotate(0deg);
+}
+/* .container>div:nth-child(1){
+    background-color: #fff;
+}
+.container>div:nth-child(2){
+    background-color: darkcyan;
+}
+.container>div:nth-child(3){
+    background-color: turquoise;
+} */
+.container>div>p{
+    transform: rotateY(180deg);
+    transition: all 1s;
+}
+
+/* Grid array */
+.Home .it:nth-of-type(1){
+    grid-column: 1 / span 2;
+}
+.Home .it:nth-of-type(6){
+    grid-row: 2 / span 2;
+    grid-column: 3;
+}
+.Home .it:nth-of-type(7){
+    grid-row: 2 / span 2;
+    grid-column: 4;
+}
+.Home .it:nth-of-type(11){
+    grid-row: 4;
+    grid-column: 2 / span 2;
+}
+
+.Value .it:nth-of-type(3){
+    grid-row: 1;
+    grid-column: 3 / span 2;
+}
+.Value .it:nth-of-type(4){
+    grid-row: 2 / span 2;
+    grid-column: 1;
+}
+.Value .it:nth-of-type(5){
+    grid-row: 2 / span 2;
+    grid-column: 2 / span 2;
+}
+
+.Social .it:nth-of-type(1){
+    grid-row: 1 / span 4;
+    grid-column: 1 / span 2;
+}
+.Social .it:nth-of-type(4){
+    grid-row: 2;
+    grid-column: 3 / span 2;
+}
+.Social .it:nth-of-type(5){
+    grid-row: 3 / span 2;
+    grid-column: 3;
+}
+
+/* image, color insert */
+.Home .it:nth-of-type(1){
+    background: #0b0b0b;
+    background-image: url(../images/Blogo3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Home .it:nth-of-type(2){
+    background-image: url(../images/bws3.jpg);
+    background-size: cover;
+}
+.Home .it:nth-of-type(3){
+    background: #303030;
+}
+.Home .it:nth-of-type(4){
+    background: #7a7a7a;
+    color: #d7d7d7;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-style: italic;
+}
+.Home .it:nth-of-type(5){
+    background-image: url(../images/bws1.jpg);
+    background-size: cover;
+}
+.Home .it:nth-of-type(6){
+    background-image: url(../images/bws2.jpg);
+    background-size: cover;
+}
+.Home .it:nth-of-type(7){
+    background-image: url(../images/bws4.jpg);
+    background-size: cover;
+}
+.Home .it:nth-of-type(8){
+    background-image: url(../images/bws6.jpg);
+    background-size: cover;
+}
+.Home .it:nth-of-type(9){
+    background: #3c3c3c;
+}
+.Home .it:nth-of-type(10){
+    background: #3c3c3c;
+    color: #d6d6d6;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+.Home .it:nth-of-type(11){
+    background-image: url(../images/bws5.jpg);
+    background-size: cover;
+}
+.Home .it:nth-of-type(12){
+    background: #1e1e1e;
+    color: #d6d6d6;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.Value .it:nth-of-type(1){
+    background: #373737;
+    color: #cdcdcd;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+}
+.Value .it:nth-of-type(2){
+    background-image: url(../images/bws2_3.jpg);
+    background-size: cover;
+}
+.Value .it:nth-of-type(3){
+    background: #0b0b0b;
+    background-image: url(../images/title2.png);
+    
+    background-size: 330px 55px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Value .it:nth-of-type(4){
+    background-image: url(../images/bws2_6.jpg);
+    background-size: cover;
+}
+.Value .it:nth-of-type(5){
+    background-image: url(../images/bws2_1.jpg);
+    background-size: cover;
+}
+.Value .it:nth-of-type(6){
+    background-image: url(../images/bws2_2.jpg);
+    background-size: cover;
+}
+.Value .it:nth-of-type(7){
+    background: #2f2f2f;
+    color: #cbcbcb;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+}
+.Value .it:nth-of-type(8){
+    background-image: url(../images/bws2_5.jpg);
+    background-size: cover;
+}
+.Value .it:nth-of-type(9){
+    background: #4b4b4b;
+    color: #f0f0f0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+}
+.Value .it:nth-of-type(10){
+    background-image: url(../images/bws2_4.jpg);
+    background-size: cover;
+}
+.Value .it:nth-of-type(11){
+    background-image: url(../images/bws2_7.jpg);
+    background-size: cover;
+}
+
+.Social .it:nth-of-type(1){
+    background-image: url(../images/bws3_1.jpg);
+    background-size: cover;
+}
+.Social .it:nth-of-type(2){
+    background: #2a2a2a;
+    color: #dcdcdc;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    font-style: italic;
+}
+.Social .it:nth-of-type(3){
+    background-image: url(../images/bws3_2.jpg);
+    background-size: cover;
+}
+.Social .it:nth-of-type(4){
+    background: #0b0b0b;
+    background-image: url(../images/title3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 280px 40px;
+}
+.Social .it:nth-of-type(5){
+    background-image: url(../images/bws3_3.jpg);
+    background-size: cover;
+}
+.Social .it:nth-of-type(6){
+    background: #1a1a1a;
+    color: #c8c8c8;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    font-style: italic;
+}
+.Social .it:nth-of-type(7){
+    background-image: url(../images/bws3_4.jpg);
+    background-size: cover;
 }
