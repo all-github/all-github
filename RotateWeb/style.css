@@ -175,12 +175,12 @@
 /* image, color insert */
 .Home .it:nth-of-type(1){
     background: #0b0b0b;
-    background-image: url(../images/Blogo3.png);
+    background-image: url(images/Blogo3.png);
     background-repeat: no-repeat;
     background-position: center;
 }
 .Home .it:nth-of-type(2){
-    background-image: url(../images/bws3.jpg);
+    background-image: url(images/bws3.jpg);
     background-size: cover;
 }
 .Home .it:nth-of-type(3){
@@ -197,19 +197,19 @@
     font-style: italic;
 }
 .Home .it:nth-of-type(5){
-    background-image: url(../images/bws1.jpg);
+    background-image: url(images/bws1.jpg);
     background-size: cover;
 }
 .Home .it:nth-of-type(6){
-    background-image: url(../images/bws2.jpg);
+    background-image: url(images/bws2.jpg);
     background-size: cover;
 }
 .Home .it:nth-of-type(7){
-    background-image: url(../images/bws4.jpg);
+    background-image: url(images/bws4.jpg);
     background-size: cover;
 }
 .Home .it:nth-of-type(8){
-    background-image: url(../images/bws6.jpg);
+    background-image: url(images/bws6.jpg);
     background-size: cover;
 }
 .Home .it:nth-of-type(9){
@@ -225,7 +225,7 @@
     font-size: 1.5em;
 }
 .Home .it:nth-of-type(11){
-    background-image: url(../images/bws5.jpg);
+    background-image: url(images/bws5.jpg);
     background-size: cover;
 }
 .Home .it:nth-of-type(12){
@@ -248,27 +248,27 @@
     font-size: 1.6em;
 }
 .Value .it:nth-of-type(2){
-    background-image: url(../images/bws2_3.jpg);
+    background-image: url(images/bws2_3.jpg);
     background-size: cover;
 }
 .Value .it:nth-of-type(3){
     background: #0b0b0b;
-    background-image: url(../images/title2.png);
+    background-image: url(images/title2.png);
     
     background-size: 330px 55px;
     background-repeat: no-repeat;
     background-position: center;
 }
 .Value .it:nth-of-type(4){
-    background-image: url(../images/bws2_6.jpg);
+    background-image: url(images/bws2_6.jpg);
     background-size: cover;
 }
 .Value .it:nth-of-type(5){
-    background-image: url(../images/bws2_1.jpg);
+    background-image: url(images/bws2_1.jpg);
     background-size: cover;
 }
 .Value .it:nth-of-type(6){
-    background-image: url(../images/bws2_2.jpg);
+    background-image: url(images/bws2_2.jpg);
     background-size: cover;
 }
 .Value .it:nth-of-type(7){
@@ -281,7 +281,7 @@
     font-size: 1.6em;
 }
 .Value .it:nth-of-type(8){
-    background-image: url(../images/bws2_5.jpg);
+    background-image: url(images/bws2_5.jpg);
     background-size: cover;
 }
 .Value .it:nth-of-type(9){
@@ -294,16 +294,16 @@
     font-size: 1.6em;
 }
 .Value .it:nth-of-type(10){
-    background-image: url(../images/bws2_4.jpg);
+    background-image: url(images/bws2_4.jpg);
     background-size: cover;
 }
 .Value .it:nth-of-type(11){
-    background-image: url(../images/bws2_7.jpg);
+    background-image: url(images/bws2_7.jpg);
     background-size: cover;
 }
 
 .Social .it:nth-of-type(1){
-    background-image: url(../images/bws3_1.jpg);
+    background-image: url(images/bws3_1.jpg);
     background-size: cover;
 }
 .Social .it:nth-of-type(2){
@@ -317,18 +317,18 @@
     font-style: italic;
 }
 .Social .it:nth-of-type(3){
-    background-image: url(../images/bws3_2.jpg);
+    background-image: url(images/bws3_2.jpg);
     background-size: cover;
 }
 .Social .it:nth-of-type(4){
     background: #0b0b0b;
-    background-image: url(../images/title3.png);
+    background-image: url(images/title3.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 280px 40px;
 }
 .Social .it:nth-of-type(5){
-    background-image: url(../images/bws3_3.jpg);
+    background-image: url(images/bws3_3.jpg);
     background-size: cover;
 }
 .Social .it:nth-of-type(6){
@@ -342,6 +342,6 @@
     font-style: italic;
 }
 .Social .it:nth-of-type(7){
-    background-image: url(../images/bws3_4.jpg);
+    background-image: url(images/bws3_4.jpg);
     background-size: cover;
 }
