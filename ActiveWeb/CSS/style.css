@@ -253,7 +253,8 @@ li{
     border-radius: 50%;
 }
 
-/* #about > .tab_btn{
+
+#about > .tab_btn{
     text-align: center;
 }
 #about > .tab_btn > label{
@@ -266,11 +267,11 @@ li{
 #about > input[name="tab"]{
     display: none;
 }
-#about > input[id="tab1"]:checked ~ .tab_btn label[for="tab1"],
-#about > input[id="tab2"]:checked ~ .tab_btn label[for="tab2"],
-#about > input[id="tab3"]:checked ~ .tab_btn label[for="tab3"]{
+#about >input[id="tab1"]:checked ~ .tab_btn label[for="tab1"],
+#about >input[id="tab2"]:checked ~ .tab_btn label[for="tab2"],
+#about >input[id="tab3"]:checked ~ .tab_btn label[for="tab3"]{
     background-color: #7e5af3;
-} */
+}
 
 
 /* 섭타이틀 */
