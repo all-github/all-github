@@ -8,7 +8,7 @@
         const hours = date.getHours();
         const minutes = date.getMinutes();
         const seconds = date.getSeconds();
-        console.log( hours + "/" + minutes + "/" + seconds );
+        // console.log( hours + "/" + minutes + "/" + seconds );
         //화면 출력 함수 호출
         setViewClock(hours,minutes,seconds);
     }
@@ -26,7 +26,7 @@
         let strS = `${s<10 ? `0${s}` : s}`;
      
         clockElem.innerText = `${strH} : ${strM} : ${strS}`;
-    }
+    } 
 
     getTime();
     setInterval(getTime, 1000 );
