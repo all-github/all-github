@@ -19,7 +19,7 @@
             const name = myJson.name;
             const temp = Math.floor(myJson.main.temp);
             //소수점 버리기가 Math.floor
-            textElem.innerText = `지역: ${name} /  온도: ${temp}℃`;
+            textElem.innerText = `지역: ${name} /  온도: ${temp}˚C`;
         });
     }
 
