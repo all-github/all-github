@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="css/docstyle.css"> -->
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                color: #fff;
+            }
+            body{
+                background-image: url("/images/wa4.jpg");
+                background-size: cover;
+            }
+            #view-clock{
+                text-align: center;
+                margin: 0 auto;
+                font-size: 6rem;
+                padding-top: 15rem;
+                word-spacing: -60px;
+            }
+            #view-user{
+                text-align: center;
+                padding: 3px;
+                border-bottom: 2px solid #fff;
+                font-size: 1.7rem;
+            }
+            #view_weather{
+                float: right;
+                padding: 30px;
+                font-weight: bold;
+            }
+        </style>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="view_weather">
+            <span class="weather_text"></span>
+        </div>
+        <div id="view-clock">
+            <h1> 00:00:00 </h1>
+        </div>
+        <div id="view-user">
+        </div>
+        <script src="username.js"></script>
+        <script src="clock.js"></script>
+        <script src="weather.js"></script>
+    </body>
+</html>
