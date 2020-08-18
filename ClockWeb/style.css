@@ -32,3 +32,10 @@ body{
     font-weight: bold;
     font-family: 'Gugi', cursive;
 }
+.todo>span:nth-child(1){
+    color: red;
+    cursor: pointer;
+}
+.todo>span:nth-child(2){
+    color: #fff;
+}
