@@ -1,0 +1,250 @@
+@charset "utf-8";
+
+*{
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+}
+
+body{
+    height: 1000vw;
+}
+
+#wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: aquamarine;
+    perspective: 1000px;
+    background-image: url(/scroll_project/images/main.png);
+    background-size: cover;
+}
+
+#container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: rotateX(5deg) rotateY(5deg);
+}
+
+
+#stage{
+    width: 100vw;
+    height: 100vh;
+    transform: translateZ(-500vw);
+    transform-style: preserve-3d;
+}
+
+.menu{
+    /* font */
+    color: #fff;
+    font-size: 1.1rem;
+    text-shadow: 1.6px 1.6px 0.3px #777;
+    font-weight: bold;
+    font-style: italic;
+    
+    position: fixed;
+    top: 300px;
+    left: 130px;
+    line-height: 50px;
+}
+
+/* 이렇게 relative되어있지 않으면 s_gnb의 a가 다 묶여있는 게 되어버린다 */
+/* .s_gnb>li{
+    position: relative;
+}
+.s_gnb a{
+    color: #fff;
+}
+.s_gnb a:before{
+    content: "";
+    background-color:#fff;
+    top: 10px;
+    left: -17px;
+    width: 10%;
+    height: 30px;
+    transform: skewX(-25deg);
+
+    position: absolute;
+} */
+
+
+/* #stage>.card-left{
+    width: 1000vw;
+    transform: rotateY(90deg) translateZ(-500vw);
+}
+
+#stage>.card-right{
+    width: 1000vw;
+    transform: rotateY(90deg) translateZ(-400vw);
+} */
+
+
+#stage>.card-box-1{
+    transform: translateZ(300vw);
+    background-image: url(/scroll_project/images/save1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 100px;
+    left: 200px;
+}
+#stage>.card-box-2{
+    transform: translateZ(100vw);
+    background-image: url(/scroll_project/images/save2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 100px;
+    left: 1000px;
+}
+#stage>.card-box-3{
+    transform: translateZ(-100vw);
+    background-image: url(/scroll_project/images/save3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 150px;
+    left: 900px;
+}
+#stage>.card-box-4{
+    transform: translateZ(-300vw);
+    background-image: url(/scroll_project/images/save4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 100px;
+    left: 600px;
+}
+#stage>.card-box-5{
+    transform: translateZ(-500vw);
+    background-image: url(/scroll_project/images/save5.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 100px;
+    left: 700px;
+}
+
+/* effect */
+#stage>.card-back-1{
+    transform: translateZ(300vw);
+    background-image: url(/scroll_project/images/effect1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 80px;
+    left: -20px;
+}
+#stage>.card-back-2{
+    transform: translateZ(100vw);
+    background-image: url(/scroll_project/images/effect2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 20px;
+    left: 150px;
+}
+#stage>.card-back-3{
+    transform: translateZ(-100vw);
+    background-image: url(/scroll_project/images/effect3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -5px;
+    left: 170px;
+}
+#stage>.card-back-4{
+    transform: translateZ(-300vw);
+    background-image: url(/scroll_project/images/effect4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 10px;
+    left: 100px;
+}
+#stage>.card-back-5{
+    transform: translateZ(-500vw);
+    background-image: url(/scroll_project/images/effect5.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -2px;
+    left: 100px;
+}
+
+#stage>section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background: rgba(255,255,255,0.7); */
+}
+
+#stage>section .card-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#stage>section .card-content{
+    font-size: 5rem;
+}
+
+/* 서브메뉴 구성 */
+.sub-gnb{
+    position: fixed;
+    color: #fff;
+    top: 350px;
+    left: 150px;
+    z-index: 1;
+    text-shadow: 1.5px 1.5px 0.3px #888;
+    font-weight: bold;
+    font-style: italic;
+}
+.sub-gnb li{
+    margin-bottom: 10px;
+    width: 150px;
+    height: 40px;
+    font-size: 1.1rem;
+    position: relative;
+}
+.sub-gnb li::before{
+    content: "";
+    background-color:#fff;
+
+    width: 3%;
+    height: 100%;
+    transform: skewX(-25deg);
+
+    display: block;
+    position: absolute;
+    transition: 0.5s;
+    box-shadow: 1px 1px 1px #888;
+}
+.sub-gnb li>span{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+.sub-gnb li:hover:before{
+    width: 100%;
+}
+
+
+/* 메인메뉴 구성 */
+.main-gnb{
+    position: fixed;
+    color: #959595;
+    top: 80px;
+    left: 950px;
+    z-index: 2;
+    font-weight: bold;
+
+}
+.main-gnb li{
+    display: inline-block;
+    margin-right: 30px;
+}
+.main-gnb li:hover{
+    color: #555;
+    transition: 0.5s;
+    cursor: pointer;
+}

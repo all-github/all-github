@@ -135,15 +135,21 @@
             const modalTag = document.querySelector(".modal");
             imgItem.addEventListener("click",function(e){
                 //this, currentTarget, target
-                if( this == e.target ) return;
-                // modalTag위에 if( targetSrc == null ) return; 도 가능
-                let targetSrc = e.target.getAttribute("src");
-                console.log(targetSrc);
-                //모달의 display: block
-                modalTag.style.display = "block";
-                modalTag.children[1].src = targetSrc;
-            });
+            //     if( this == e.target ) return;
+            //     // modalTag위에 if( targetSrc == null ) return; 도 가능
+            //     let targetSrc = e.target.getAttribute("src");
+            //     console.log(targetSrc);
+            //     //모달의 display: block
+            //     modalTag.style.display = "block";
+            //     modalTag.children[1].src = targetSrc;
+            // });
+            // if(this == e.target) return;
+            let targetSrc = e.target.getAttribute("src");
             
+            if(targetSrc == null) return;
+            modalTag.style.display = "block";
+            modalTag.children[1].src = targetSrc;
+
             const closeBtn = modalTag.children[0];
             closeBtn.addEventListener("click",function(){
                 modalTag.style.display = "none";
