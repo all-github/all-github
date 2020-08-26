@@ -15,19 +15,6 @@
         });
     }
 
-
-
-    // $(document).ready(function(){
-    //     $(".main-gnb li").mouseenter(function(){
-    //         $("ul").css("background-color", "#ff7878"));
-    //     });
-    //     $("main-gnb li").mouseleave(function(){
-    //         $("ul").css("background-color", "#fff");
-    //     });
-    // })
-
-
-
     //window resize event
     function onWindowResize(){
         maxScrollHeight = document.body.offsetHeight - window.innerHeight;
