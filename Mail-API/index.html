@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Send E-mail</title>
+        <script data-cfasyc="false" type="text/javascript" src="form-submission-handler.js"></script>
+        <style>
+            *{
+                box-sizing: border-box;
+                text-decoration: none;
+                margin: 0 auto;
+            }
+
+            input[type=text], select, textarea {
+                width: 100%;
+                padding: 14px;
+                font-size: 1.2rem;
+                border: 0;
+                border-bottom: 5px solid #66726f;
+                resize: vertical;
+                color: #eee;
+                background-color: #2a3d45;
+            }
+            label{
+                padding: 12px 12px 12px 0;
+                display: inline-block;
+                font-size: 1.2rem;
+            }
+            input[type=submit] {
+                background-color: #40b395;
+                color: #fff;
+                padding: 17px 24px;
+                font-size: 1.2rem;
+                border: none;
+                border-radius: 7px;
+                cursor: pointer;
+                float: right;
+                margin-top: 37px;
+            }
+            input[type=submit]:hover {
+                background-color: #41ffd7;
+            }
+            .wrapper{
+                width: 100%;
+                height: 100vh;
+                border-radius: 5px;
+                background-color: #2a3d45;
+                padding: 60px;
+                color: #fff;
+            }
+            .gform{
+                float: inherit;
+                width: 25%;
+            }
+            .gform p{
+                margin-top: 10px;
+                font-size: 1.1rem;
+            }
+            .thankyou_Message{
+                color: #41ffd7;
+                font-size: 1.5rem;
+                letter-spacing: -2px;
+            }
+            h2{
+                font-size: 3rem;
+                padding-bottom: 30px;
+                text-align: center;
+            }
+            b{
+                color: #41ffd7;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="contact">
+                <h2><b>C</b>ontact</h2>
+            </div>
+            <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbyke-o-Mxzh0SoPFLQHz7u5Y0Sh8jMQMA4KnzIG/exec">
+                <p><input type="text" name="name" placeholder="Name here"></p><br>
+                <p><input type="text" name="email" placeholder="E-mail here"></p><br>
+                <p><input type="text" name="message" placeholder="Comments here"></p><br>
+                <input type="submit" value="send">
+            </form>
+            <!-- <div class="thankyou_Message">
+                <p>메일이 정상적으로 보내졌습니다.</p>
+            </div> -->
+        </div>
+    </body>
+</html>
