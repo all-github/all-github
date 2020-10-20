@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <lang="ko">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Send E-mail</title>
         <script data-cfasyc="false" type="text/javascript" src="form-submission-handler.js"></script>
@@ -27,7 +28,7 @@
                 display: inline-block;
                 font-size: 1.2rem;
             }
-            input[type=submit] {
+            .button {
                 background-color: #40b395;
                 color: #fff;
                 padding: 17px 24px;
@@ -38,7 +39,7 @@
                 float: right;
                 margin-top: 37px;
             }
-            input[type=submit]:hover {
+            .button:hover {
                 background-color: #41ffd7;
             }
             .wrapper{
@@ -81,7 +82,7 @@
                 <p><input type="text" name="name" placeholder="Name here"></p><br>
                 <p><input type="text" name="email" placeholder="E-mail here"></p><br>
                 <p><input type="text" name="message" placeholder="Comments here"></p><br>
-                <input type="submit" value="send">
+                <input type="submit" class="button" value="send">
             </form>
             <!-- <div class="thankyou_Message">
                 <p>메일이 정상적으로 보내졌습니다.</p>
